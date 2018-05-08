@@ -20,9 +20,10 @@ Record (episode = "The Husbands of River Song", season = 9, rating = 7.69, docto
 
 
 def season_list(target_episode, doctor_who):
-	
+	list = []
     for record in doctor_who:
         if record.season == target_episode:
-            return record.episode
+            list.append(record.episode)
+	return list
 target_episode = int(input("Which Season do you want?"))
 print (season_list(target_episode, doctor_who))
